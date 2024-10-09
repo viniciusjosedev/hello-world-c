@@ -1,1 +1,1 @@
-learning c
+repo for learning c with exercises
