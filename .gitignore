@@ -1,3 +1,5 @@
 bin/**
 
 yourText.txt
+
+data-serialization.bin
