@@ -4,6 +4,7 @@
 		"stdio.h": "c",
 		"libc-header-start.h": "c",
 		"features.h": "c",
-		"stddef.h": "c"
+		"stddef.h": "c",
+		"stdbool.h": "c"
 	}
 }
