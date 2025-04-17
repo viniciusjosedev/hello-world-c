@@ -8,23 +8,23 @@ struct Book {
 };
 
 int main() {
-	struct Book bookWrite = {.author="My", .price=123, .published_year=2025, .title="title"};
+	struct Book bookWrite[1024] = {{.author="My", .price=123, .published_year=2025, .title="title"}};
 
 	FILE *fw = fopen("output.bin", "wb");
 
-	fwrite(&bookWrite, sizeof(bookWrite), 1, fw);
+	fwrite(bookWrite, sizeof(struct Book), sizeof(bookWrite) / sizeof(struct Book), fw);
 
 	fclose(fw);
 
-	struct Book bookRead;
+	struct Book bookRead[1024];
 
 	FILE *fr = fopen("output.bin", "rb");
 
-	fread(&bookRead, sizeof(bookRead), 1, fr);
+	fread(bookRead, sizeof(struct Book), sizeof(bookRead) / sizeof(struct Book), fr);
 
 	fclose(fr);
 
-	printf("%s", bookRead.title);
+	printf("%s\n", bookRead[0].title);
 	
 	return 0;
 }
