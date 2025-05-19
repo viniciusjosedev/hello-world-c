@@ -6,6 +6,7 @@
     "features.h": "c",
     "stddef.h": "c",
     "stdbool.h": "c",
-    "limits.h": "c"
+    "limits.h": "c",
+    "bar.h": "c"
   }
 }
